@@ -7,12 +7,10 @@ function App() {
   const [containerLoaded, setContainerLoaded] = useState(false);
   const [theme, setTheme] = useState('dark');
 
-  // Apply theme attribute to html
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
-  // Loading screen and container entrance
   useEffect(() => {
     const timer1 = setTimeout(() => {
       setLoadingFadeOut(true);
@@ -28,7 +26,6 @@ function App() {
     };
   }, []);
 
-  // Parallax effect
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -41,7 +38,6 @@ function App() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Link hover effects
   useEffect(() => {
     const links = document.querySelectorAll('.link');
     links.forEach(link => {

@@ -1,7 +1,4 @@
-/* Modern Minimalist Ghibli-Inspired Design */
-
 :root {
-    /* Dark Theme (default) */
     --primary-color: #182628;
     --secondary-color: #204036;
     --accent-color: #65B891;
@@ -20,7 +17,6 @@
     --particle-color-3: rgba(95, 163, 176, 0.6);
 }
 
-/* Light Theme */
 [data-theme="light"] {
     --primary-color: #F5F9F8;
     --secondary-color: #E8F1F2;
@@ -47,7 +43,6 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Loading screen */
 .loading-screen {
     position: fixed;
     top: 0;
@@ -120,7 +115,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
+    background:
         url('https://cdn.pixabay.com/photo/2022/12/22/18/49/forest-7672785_1280.jpg') center/cover no-repeat fixed;
     z-index: -2;
     filter: brightness(0.4) saturate(1.2) contrast(1.2);
@@ -138,9 +133,9 @@ body::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(circle at center, 
-            transparent 0%, 
+    background:
+        radial-gradient(circle at center,
+            transparent 0%,
             var(--background-color) 85%);
     opacity: 0.85;
     z-index: -1;
@@ -169,7 +164,6 @@ body::after {
     transform: translateY(0);
 }
 
-/* Magical particles */
 .magical-particle {
     position: absolute;
     border-radius: 50%;
@@ -279,7 +273,6 @@ body::after {
     margin-top: 0.2rem;
 }
 
-/* Sleek two-line tagline */
 .profile-content .tagline {
     display: flex;
     flex-direction: column;
@@ -290,7 +283,6 @@ body::after {
     font-weight: 500;
 }
 
-/* Compact bullet list for bio */
 .bio-list {
     list-style: disc inside;
     margin: 0;
@@ -450,7 +442,6 @@ body::after {
     transform: translateY(-3px);
 }
 
-/* Theme toggle */
 .theme-toggle {
     position: fixed;
     top: 20px;
@@ -497,60 +488,57 @@ body::after {
     visibility: visible;
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
     .profile {
         grid-template-columns: 1fr;
         text-align: center;
         gap: 15px;
     }
-    
+
     .profile-img-container {
-        margin: 0 auto;
         width: 100px;
         height: 100px;
+        margin: 0 auto 1rem;
     }
-    
+
     .profile-content {
-        text-align: center;
+        align-items: center;
     }
-    
+
     .title::after {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .container {
         padding: 1.5rem;
     }
-    
+
     .link {
         padding: 14px 18px;
     }
-    
+
     .footer {
         flex-direction: column;
         gap: 10px;
     }
-    
+
     .social-icons {
-        margin-top: 10px;
+        margin-top: 5px;
     }
 }
 
-/* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
     * {
-        animation: none !important;
-        transition: background-color 0.1s linear, color 0.1s linear !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
     }
-    
     .loading-screen {
-        display: none;
+        transition: none;
     }
-   
     .container {
-        opacity: 1;
-        transform: none;
+        transition: none;
     }
 }
