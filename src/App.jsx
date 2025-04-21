@@ -121,13 +121,13 @@ function App() {
             </p>
           </div>
           <div className="social-icons">
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/stillhatetrigo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
               <i className="fab fa-instagram"></i>
             </a>
-            <a href="#" aria-label="Twitter">
+            <a href="https://x.com/CodesPasta" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" aria-label="GitHub">
+            <a href="https://github.com/TheRealSaiTama" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <i className="fab fa-github"></i>
             </a>
           </div>
